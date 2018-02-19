@@ -41,6 +41,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        logMessage("En el metodo onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        logMessage("En el metodo onPause");
+    }
+
+    @Override
     protected void onStop() {
         super.onStop();
         logMessage("En el metodo onStop");
@@ -52,18 +64,6 @@ public class MainActivity extends AppCompatActivity {
         logMessage("En el metodo onDestroy");
     }
 
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        logMessage("En el metodo onPause");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        logMessage("En el metodo onResume");
-    }
 
     public void runCode(View view) {
         logMessage("runCode");
